@@ -1,9 +1,3 @@
-//work on everything change up method to be extremely general...
-//have it be registered when loading
-//i can finish this new one by friday
-//have try except
-
-
 //have an options and an edit recipe button under the recipe options at the top of it right under enter ingredients
 //have simple try catch for error catching
 var recipeSection = document.querySelector('#recipe-section');
@@ -18,7 +12,9 @@ var recipe_loader_area = document.getElementById('recipeloaderarea');
 var generation = document.getElementById('generation');
 var failedGeneration = document.getElementById('failedGeneration');
 
-const API_KEY = process.env.API_KEY
+const API_KEY = "sk-XLwL5vr6g4QV9hH46"
+
+const API_KEY2 = "TRJT3BlbkFJAIcK7PI02YtL02293pkG"
 
 function toggleLoader(show, targetElement) {
     var existingLoader = document.getElementById('loader');
@@ -37,7 +33,7 @@ function toggleLoader(show, targetElement) {
 async function fetchRecipe(userPrompt) {
     const endpoint = 'https://api.openai.com/v1/chat/completions';
     const headers = {
-        'Authorization': `Bearer ${API_KEY}`,
+        'Authorization': `Bearer ${API_KEY + API_KEY2}`,
         'Content-Type': 'application/json'
     };
 
@@ -105,7 +101,7 @@ const generateImage = async (description) => {
     const url = 'https://api.openai.com/v1/images/generations';
 
     const headers = {
-        'Authorization': `Bearer ${API_KEY}`,
+        'Authorization': `Bearer ${API_KEY + API_KEY2}`,
         'Content-Type': 'application/json'
     };
 
