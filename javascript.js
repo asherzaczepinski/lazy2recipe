@@ -157,6 +157,31 @@ const displayImage = async (recipe) => {
 
 recipeForm.onsubmit = async function(event) {
     event.preventDefault();
+    (async () => {
+        // Construct the URL with any required query parameters
+        const url = 'https://us-west2-bulkedalligator.cloudfunctions.net/gen-recipe-clicked';
+    
+        // Define the requestOptions for a GET request
+        const requestOptions = {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' }
+            // No body is needed for a GET request
+        };
+    
+        try {
+            const response = await fetch(url, requestOptions);
+    
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+    
+            const data = await response.json();
+            console.log("Response from the function:", data);
+        } catch (error) {
+            console.error("Error calling update_cell function:", error);
+        }
+    })();
+    
     console.log("Form submission started");
 
     // Reset UI elements
