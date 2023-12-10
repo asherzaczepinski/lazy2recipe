@@ -1,0 +1,160 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+input[type="text"], input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    margin-bottom: 10px;
+    border: 0.5px solid #000000;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #4cae4c;
+    color: white;
+    margin-top: 10px;
+}
+
+#submit_input_ingredients:hover {
+    background-color: #60d160; /* Black background on hover */
+}
+
+.promptSuggestion {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+main.container {
+    margin-top:0px
+}
+
+#loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #5c5c5c;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    margin: 30px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Existing styles for the body, header, h1, container, etc. */
+
+h1 {
+    margin: 0 auto; /* Center the title */
+    font-size: 2.5em;
+    color: #4B4E6D;
+}
+
+.form_descriptors {
+    text-align: left; 
+    margin-bottom: 15px; 
+    font-size: 30px;
+    font-weight: 200;
+    color: black;
+}
+.inactive {
+    pointer-events: none;
+    opacity: 0.5; /* or any value that indicates it's inactive */
+}
+.hidden {
+    display: none;
+}
+
+.button-disabled {
+    opacity: 0.5;
+    pointer-events: none; /* Disables clicking and hover effects */
+    /* Other styling for disabled state */
+}
+
+.button-disabled:hover {
+    background-color: #f0f0f0;
+}
+
+/*try to get the butotn!*/
+#mealTypeForm {
+    margin-top: -10px;
+}
+#mealTypeForm input {
+    background-color: rgb(118, 44, 118);
+}
+
+#mealTypeForm input:hover {
+    background-color: rgb(185, 121, 185);
+}
+
+#mealTypeForm input.selected-button,
+#mealTypeForm input.selected-button:hover {
+    background-color: rgb(185, 121, 185); /* Lighter background color for selected button */
+    /* Other styles you want to keep when selected */
+}
+
+#mealTypeForm input:hover {
+    background-color: rgb(185, 121, 185);
+}
+
+ul {
+    padding: 0;
+    list-style-type: disc; /* This will create filled-in bullet points */
+}
+
+li {
+    line-height: 1.6;
+    margin-bottom: 5px;
+    padding-left: 10px; /* Add some padding for better spacing */
+}
+
+#generatedRecipe {
+    border: 1.5px solid black;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+
+.no-bullets {
+    list-style-type: none; /* Removes bullet points */
+    margin-left: -22px;      
+}

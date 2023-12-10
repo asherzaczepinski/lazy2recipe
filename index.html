@@ -1,0 +1,75 @@
+<!--AFter we do lunch breakfast dinner and have rough draft have a button that will multiply recipe by 2 3 or 4 by accessing quantities in used
+ingredients and then multiplying the numbers within them and alos multiplying the servings per meal-->
+
+
+<!--have a section with suggestions above recipe instructions and above modify recipe for the things-->
+<!--for further version of website have it display the meal using dalle-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy2Recipe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header style = "background-color: #c9fef8;    ">
+        <h1>Lazy<span style="color: purple;">2</span>Recipe</h1>
+    </header>    
+    
+    <div class = "separator"style = "margin-left: -200%; width: 400%; background-color: black; height: 2px"></div>
+
+    <main class="container">
+
+        <section id="recipe-section" style = "margin-top: 5px;">
+            <form id="recipe-form">
+                <h1 class="form_descriptors">Recipe Instructions:</h1>
+                <input type="text" style = "margin-top: 5px" id="recipe_input" aria-label="Recipe input" placeholder="type recipe instructions"/>
+                <input type="submit" id="submit_recipe" value="Generate Recipe" />              
+            </form>
+        </section>
+        
+        <div class = "separator"style = "margin-left: -200%; margin-top: 30px; margin-bottom: 30px; width: 400%; background-color: black; height: 2px"></div>
+
+        <section class="promptSuggestion">
+            <ul>
+                <li class="no-bullets">Examples:</li>
+                <li style = "margin-top: 10px">"Give me a recipe using a 6 ounce steak, 2 potatoes, and no butter"</li>
+                <li>"Create me a great dinner recipe for 6 people"</li>
+                <li>"Generate me a one person vegetarian dinner"</li>
+                <br>
+                <li class="no-bullets">Warnings:</li>
+                <li style = "margin-top: 10px">Innapropriate content will not go through</li>
+                <li>Check that the recipe is safe for consumption</li>        
+            </ul>
+        </section>
+
+        <div class = "separator"style = "margin-left: -200%; margin-top: 30px; width: 400%; background-color: black; height: 2px"></div>
+        <div id="failedGeneration" class="hidden">
+            <h3 style="font-weight: 200; line-height: 30px; color: red">There was an error generating the recipe! Try again or come back later!</h3>
+        </div>
+        <div id="generation" class="hidden">
+
+            <h1 class="form_descriptors" style = "margin-top: 25px">Generated Recipe:</h1>
+                <!--this is for testing classes will be hidden later-->
+            <div id="generatedRecipe" style ="text-align: left;">
+                <img id = "generatedImage" src = "" width = "40%" style = "border: 1.5px solid black; border-radius: 20px; margin-left: 30%; margin-top: 40px">
+                <div class = "separator"style = "margin-left: -20px; margin-top: 30px; margin-right: -20px; background-color: black; height: 1.5px"></div>
+
+                <h3 id="recipe" style="font-weight: 500;">
+                    The recipe generation failed!
+                </h3>
+                
+            </div>
+
+        </div>
+        <div id="recipeloaderarea"></div>
+
+    </main>
+    
+    
+    
+    <script src="javascript.js"></script>
+</body>
+</html>
